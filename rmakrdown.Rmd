@@ -13,14 +13,14 @@ knitr::opts_chunk$set(echo = TRUE)
 
 # Task 3.1
 
-``` {sum function}
+```{r, echo=FALSE}
 sum(5:55)
 ```
 
 
 # Task 3.2
 
-```{write new sum function}
+```{r, echo=FALSE}
 sumfun <- function(n) {sum(5:n)}
 sumfun(10)
 
@@ -32,20 +32,20 @@ sumfun(100)
 # Task 3.3
 
 ```{r, echo=FALSE}
-fib <- function(n) {  #function for calculating fibonnaci of a vector with n values
-  fib <-numeric(n)
-  fib[1] <- 1 #second element of fibonnaci series is 1
-  fib[2] <- 1 #second element of fibonnaci series is  2
+series <- function(n) {  #function for calculating fibonnaci of a vector with n values
+  series <-numeric(n)
+  series[1] <- 1 #second element of fibonnaci series is 1
+  series[2] <- 1 #second element of fibonnaci series is  2
   i = 3 # start the loop at the third element
   
   while (i <= n) { # repeat the loop upto 12th  element of fib
-    fib[i]=fib[i - 1] + fib[i - 2]
+    series[i]=series[i - 1] + series[i - 2]
     i<- i + 1
   }
-  return(fib) # return the answer
+  return(series) # return the answer
 }
 
-fib(12)
+series(12)
 ```
 
 # Task 3.4
